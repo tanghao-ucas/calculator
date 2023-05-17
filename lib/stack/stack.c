@@ -15,7 +15,7 @@ bool stack_empty(stack s)
 
 bool stack_full(stack s)
 {
-    return s.top == (MAX_DEPTH - 1);
+    return s.top == (MAX_LENGTH - 1);
 }
 
 bool stack_push(stack *s, char c[])

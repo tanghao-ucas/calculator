@@ -8,7 +8,7 @@
 
 int priority(char c);
 
-void preprocess(char expr[100], char translate[100][10]);
+void preprocess(char expr[MAX_LENGTH], char translate[MAX_LENGTH][MAX_SIZE]);
 
 float add(float num1, float num2);
 

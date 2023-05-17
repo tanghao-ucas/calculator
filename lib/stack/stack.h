@@ -5,11 +5,11 @@
 #include <stdbool.h>
 #include <stdio.h>
 
-#define MAX_DEPTH 100
-#define MAX_LENGTH 10
+#define MAX_LENGTH 100
+#define MAX_SIZE 10
 typedef struct Stack stack;
 struct Stack{
-    char data[MAX_DEPTH][MAX_LENGTH];
+    char data[MAX_LENGTH][MAX_SIZE];
     int top;
 };
 

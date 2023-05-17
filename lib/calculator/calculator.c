@@ -12,19 +12,23 @@ int priority(char c)
     }
 }
 
-void preprocess(char expr[100], char translate[100][10])
+void preprocess(char expr[MAX_LENGTH], char translate[MAX_LENGTH][MAX_SIZE])
 {
     stack s = stack_init();
-    char tmp[10];
-    int i = 0, j = 0, k = 0;
+    char tmp[MAX_SIZE];
+    int k = 0;
     
-    while(i < strlen(expr)){
+    for(int i = 0; i < strlen(expr); i++){
+    //while(i < strlen(expr)){
+        if(expr[i] == ' ')
+            continue;
         memset(tmp, 0, sizeof(tmp));
         if(isdigit(expr[i])){
-            do{
-                tmp[j++] = expr[i++];
-            }while(i < strlen(expr) && isdigit(expr[i]));
-            j = 0;
+            int j = 0;
+            for(; i + j < strlen(expr) && isdigit(expr[i + j]); j++){
+                tmp[j] = expr[i + j];
+            }
+            i += (j - 1);
             strcpy(translate[k++], tmp);
         }
         else{
@@ -49,7 +53,7 @@ void preprocess(char expr[100], char translate[100][10])
                     stack_push(&s, tmp);
                     break;
             }
-            i++;
+            //i++;
         }
     }
     while(!stack_empty(s)){

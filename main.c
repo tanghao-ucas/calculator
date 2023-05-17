@@ -11,15 +11,15 @@ void input(char expr[100], char translate[100][10])
 
 int main(int argc, char* argv[])
 {   
-    char expr[100];
-    char translate[100][10];
+    char expr[MAX_LENGTH];
+    char translate[MAX_LENGTH][MAX_SIZE];
     
     input(expr, translate);
 
+    printf("Translated: ");
     for(int i = 0; i < 12; i++){
         printf("%s ", translate[i]);
     }
-
     printf("\n");
 
     return 0;
