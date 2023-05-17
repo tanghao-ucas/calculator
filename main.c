@@ -16,11 +16,5 @@ int main(int argc, char* argv[])
     
     input(expr, translate);
 
-    printf("Translated: ");
-    for(int i = 0; i < 12; i++){
-        printf("%s ", translate[i]);
-    }
-    printf("\n");
-
     return 0;
 }
