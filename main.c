@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include "calculator.h"
 #include "stack.h"
+#include "vector.h"
 
-void input(char expr[100], char translate[100][10])
+void input(char *expr, char *translate[])
 {
     printf("Input the expression:\n");
     scanf("%s", expr);
@@ -13,6 +14,7 @@ int main(int argc, char* argv[])
 {   
     char expr[MAX_LENGTH];
     char translate[MAX_LENGTH][MAX_SIZE];
+    vector v = vector_init();
     
     input(expr, translate);
 
