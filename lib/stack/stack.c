@@ -18,7 +18,7 @@ bool stack_full(stack s)
     return s.top == (MAX_LENGTH - 1);
 }
 
-bool stack_push(stack *s, char c[])
+bool stack_push(stack *s, char *c)
 {
     if(stack_full(*s)){
         printf("Stack Error: stack is full, nothing can push in\n");
@@ -26,12 +26,12 @@ bool stack_push(stack *s, char c[])
     }
     else{
         strcpy(s->data[++s->top],  c);
-        printf("Stack Operation: Pushing %s\n", c);
+        //printf("Stack Operation: Pushing %s\n", c);
         return true;
     }
 }
 
-bool stack_pop(stack *s, char c[])
+bool stack_pop(stack *s, char *c)
 {
     if(stack_empty(*s)){
         printf("Stack Error: stack is empty, nothing to pop out\n");
@@ -39,7 +39,7 @@ bool stack_pop(stack *s, char c[])
     }
     else{
         strcpy(c, s->data[s->top--]);
-        printf("Stack Operation: Poping %s\n", c);
+        //printf("Stack Operation: Poping %s\n", c);
         return true;
     }
 }

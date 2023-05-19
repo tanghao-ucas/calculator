@@ -2,7 +2,7 @@
 #define CALCULATOR_STRUCTURE
 
 #define MAX_LENGTH 100
-#define MAX_SIZE 10
+#define MAX_SIZE 20
 
 /*
  * struct stack 

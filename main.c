@@ -3,20 +3,21 @@
 #include "stack.h"
 #include "vector.h"
 
-void input(char *expr, char *translate[])
+vector input()
 {
+    char str[MAX_LENGTH * MAX_SIZE];
     printf("Input the expression:\n");
-    scanf("%s", expr);
-    preprocess(expr, translate);
+    scanf("%[^\n]", str);
+    vector expr = preprocess(str);
+    return expr;
 }
 
 int main(int argc, char* argv[])
 {   
-    char expr[MAX_LENGTH];
-    char translate[MAX_LENGTH][MAX_SIZE];
-    vector v = vector_init();
-    
-    input(expr, translate);
+    vector expr = input();
+    vector_print(expr);
+
+    printf("answer: %f\n", process(expr));
 
     return 0;
 }
