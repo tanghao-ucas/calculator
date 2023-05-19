@@ -1,9 +1,0 @@
-{
-    "files.associations": {
-        "stack.h": "c",
-        "vector.h": "c",
-        "string.h": "c",
-        "structure.h": "c",
-        "stdlib.h": "c"
-    }
-}
