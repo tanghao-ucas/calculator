@@ -1,5 +1,5 @@
-./.vscode/
-./*.o
-./lib/stack/*.o
-./lib/calculator/*.o
-./test/
+.vscode/
+*.o
+lib/stack/*.o
+lib/calculator/*.o
+test/
